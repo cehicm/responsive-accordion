@@ -3,9 +3,19 @@
   font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("../../fonts/kumbh-sans-v6-latin-regular.eot");
+  src: url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-regular.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../../fonts/kumbh-sans-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/kumbh-sans-v6-latin-regular.woff2") format("woff2"), url("../../fonts/kumbh-sans-v6-latin-regular.woff") format("woff"), url("../../fonts/kumbh-sans-v6-latin-regular.ttf") format("truetype"), url("../../fonts/kumbh-sans-v6-latin-regular.svg#KumbhSans") format("svg");
+  src: local(""), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-regular.woff2") format("woff2"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-regular.woff") format("woff"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-regular.ttf") format("truetype"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-regular.svg#KumbhSans") format("svg");
+  /* Legacy iOS */
+}
+/* kumbh-sans-700 - latin */
+@font-face {
+  font-family: "Kumbh Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local(""), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-700.woff2") format("woff2"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-700.woff") format("woff"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-700.ttf") format("truetype"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-700.svg#KumbhSans") format("svg");
   /* Legacy iOS */
 }
 /* kumbh-sans-900 - latin */
@@ -13,11 +23,56 @@
   font-family: "Kumbh Sans";
   font-style: normal;
   font-weight: 900;
-  src: url("../../fonts/kumbh-sans-v6-latin-900.eot");
+  src: url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.eot");
   /* IE9 Compat Modes */
-  src: local(""), url("../../fonts/kumbh-sans-v6-latin-900.eot?#iefix") format("embedded-opentype"), url("../../fonts/kumbh-sans-v6-latin-900.woff2") format("woff2"), url("../../fonts/kumbh-sans-v6-latin-900.woff") format("woff"), url("../../fonts/kumbh-sans-v6-latin-900.ttf") format("truetype"), url("../../fonts/kumbh-sans-v6-latin-900.svg#KumbhSans") format("svg");
+  src: local(""), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.woff2") format("woff2"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.woff") format("woff"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.ttf") format("truetype"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.svg#KumbhSans") format("svg");
   /* Legacy iOS */
 }
 body {
   font-family: "Kumbh Sans";
+}
+
+.question-title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.question-answer {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #787887;
+}
+
+.accordion-list-container {
+  padding: 0 20px;
+}
+.accordion-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accordion-list-wrapper ul > li {
+  list-style: none;
+}
+.accordion-list-wrapper .list-item {
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid #e8e8ea;
+}
+.accordion-list-wrapper .list-item .question-title {
+  margin: 0;
+  grid-row: 1;
+}
+.accordion-list-wrapper .list-item svg {
+  grid-row: 1;
+  fill: #f47b56;
+  stroke: #f47b56;
+  stroke-width: 40px;
+  height: 14px;
+  width: 18px;
 }
