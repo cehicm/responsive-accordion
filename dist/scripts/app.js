@@ -1,1 +1,1 @@
-"use strict";
+"use strict";!function(t){t(".list-item").on("click",(function(){t(this).children(".question-answer").slideToggle("slow"),t(this).children(".question-title").toggleClass("text-dark--bold "),t(this).children("svg").toggleClass("rotate-180")}))}(jQuery);
