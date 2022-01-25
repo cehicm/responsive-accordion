@@ -1,4 +1,5 @@
 @use "../variables/colors" as colors;
+@import "../variables/breakpoints";
 
 .accordion {
   &-list-wrapper {
@@ -15,34 +16,40 @@
     }
 
     .accordion-main-title {
-      padding-top: 105px;
+      margin-top: 124px;
+      margin-bottom: 22px;
     }
 
     .list-item {
       display: grid;
       align-items: center;
-      padding-top: 15px;
-      padding-bottom: 5px;
+      width: 75vw;
+      padding: 7px 0;
       border-bottom: 1px solid colors.$border-light-gray;
+
+      @include sc-breakpoint(425) {
+        max-width: 67vw;
+      }
 
       .question-title {
         grid-row: 1;
+      }
+
+      .question-answer {
         margin: 0;
+        padding-top: 1px;
+        padding-bottom: 7px;
       }
 
       svg {
         grid-row: 1;
-        height: 11px;
-        width: 14px;
-        fill: colors.$arrow-orange;
-        stroke: colors.$arrow-orange;
-        stroke-width: 40px;
+        justify-self: end;
       }
     }
   }
 
   &-list-container {
     margin-top: 0;
-    padding: 0 27px;
+    padding: 0 27px 31px 30px;
   }
 }
