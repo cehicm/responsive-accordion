@@ -1,0 +1,32 @@
+@use "../variables/colors" as colors;
+
+body {
+  background: linear-gradient(
+    180deg,
+    colors.$gradient-light-purple 0%,
+    colors.$gradient-dark-purple 100%
+  );
+}
+
+.accordion {
+  &-wrapper {
+    margin-top: 30px;
+  }
+
+  &-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 75px;
+  }
+}
+
+.border-img {
+  position: absolute;
+  &__main {
+    width: 236.85px;
+  }
+  &__shadow {
+    top: 112px;
+  }
+}
