@@ -1,4 +1,5 @@
 @use "../variables/colors" as colors;
+
 body {
   font-family: "Kumbh Sans";
 }
@@ -13,9 +14,6 @@ body {
     color: colors.$arrow-orange;
     cursor: pointer;
   }
-  &:active {
-    font-weight: 700;
-  }
 }
 
 .question-answer {
@@ -27,4 +25,13 @@ body {
 .accordion-main-title {
   font-size: 32px;
   line-height: 40px;
+}
+
+.text--hidden {
+  display: none;
+}
+
+.text-dark--bold {
+  font-weight: 700;
+  color: colors.$question-title-dark-gray;
 }
