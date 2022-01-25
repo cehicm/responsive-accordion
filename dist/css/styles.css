@@ -28,6 +28,10 @@
   src: local(""), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.woff2") format("woff2"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.woff") format("woff"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.ttf") format("truetype"), url("../fonts/kumbh-sans-v6-latin/kumbh-sans-v6-latin-900.svg#KumbhSans") format("svg");
   /* Legacy iOS */
 }
+.rotate-180 {
+  transform: rotateZ(180deg);
+}
+
 body {
   font-family: "Kumbh Sans";
 }
@@ -42,9 +46,6 @@ body {
   color: #f47b56;
   cursor: pointer;
 }
-.question-title:active {
-  font-weight: 700;
-}
 
 .question-answer {
   color: #787887;
@@ -55,6 +56,15 @@ body {
 .accordion-main-title {
   font-size: 32px;
   line-height: 40px;
+}
+
+.text--hidden {
+  display: none;
+}
+
+.text-dark--bold {
+  font-weight: 700;
+  color: #4b4c5f;
 }
 
 .accordion-list-wrapper {
@@ -70,30 +80,36 @@ body {
   list-style: none;
 }
 .accordion-list-wrapper .accordion-main-title {
-  padding-top: 105px;
+  margin-top: 124px;
+  margin-bottom: 22px;
 }
 .accordion-list-wrapper .list-item {
   display: grid;
   align-items: center;
-  padding-top: 15px;
-  padding-bottom: 5px;
+  width: 75vw;
+  padding: 7px 0;
   border-bottom: 1px solid #e8e8ea;
+}
+@media (min-width: 425px) {
+  .accordion-list-wrapper .list-item {
+    max-width: 67vw;
+  }
 }
 .accordion-list-wrapper .list-item .question-title {
   grid-row: 1;
+}
+.accordion-list-wrapper .list-item .question-answer {
   margin: 0;
+  padding-top: 1px;
+  padding-bottom: 7px;
 }
 .accordion-list-wrapper .list-item svg {
   grid-row: 1;
-  height: 11px;
-  width: 14px;
-  fill: #f47b56;
-  stroke: #f47b56;
-  stroke-width: 40px;
+  justify-self: end;
 }
 .accordion-list-container {
   margin-top: 0;
-  padding: 0 27px;
+  padding: 0 27px 31px 30px;
 }
 
 body {
@@ -101,7 +117,10 @@ body {
 }
 
 .accordion-wrapper {
-  margin-top: 30px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
 }
 .accordion-container {
   position: relative;
