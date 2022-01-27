@@ -7,29 +7,3 @@ body {
     colors.$gradient-dark-purple 100%
   );
 }
-
-.accordion {
-  &-wrapper {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
-
-  &-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 75px;
-  }
-}
-
-.border-img {
-  position: absolute;
-  &__main {
-    width: 236.85px;
-  }
-  &__shadow {
-    top: 112px;
-  }
-}
