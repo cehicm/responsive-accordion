@@ -18,34 +18,39 @@
     .border-img {
       position: absolute;
       &__main {
+        @include sc-breakpoint(768) {
+          width: 518px;
+        }
+
         width: 236.85px;
       }
       &__shadow {
+        @include sc-breakpoint(768) {
+          top: 221px;
+          width: 518px;
+        }
         top: 112px;
       }
     }
   }
 
   &-list-container {
+    @include sc-breakpoint(768) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     margin-top: 0;
     padding: 0 27px 31px 27px;
-    max-width: 300px;
-    .list-item {
-      .question-answer {
-        display: none;
-      }
-      &.open {
-        .question-answer {
-          display: block;
-        }
-      }
-      .question-title {
-        margin: 0;
-        padding: 10px 0;
-      }
-    }
   }
   &-list-wrapper {
+    @include sc-breakpoint(768) {
+      width: 90vw;
+      margin-top: 241;
+    }
+
+    width: 88vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,32 +64,64 @@
     }
 
     .accordion-main-title {
+      @include sc-breakpoint(768) {
+        margin-top: 245px;
+        margin-bottom: 60px;
+      }
+
+      @include sc-breakpoint(768) {
+        margin-top: 79px;
+      }
+
       margin-top: 124px;
       margin-bottom: 22px;
     }
 
     .list-item {
+      @include sc-breakpoint(425) {
+        max-width: 63vw;
+      }
+
+      @include sc-breakpoint(768) {
+        max-width: 70vw;
+        padding: 20px 0;
+      }
+
       display: grid;
       align-items: center;
       width: 79vw;
       padding: 7px 0;
       border-bottom: 1px solid colors.$border-light-gray;
 
-      @include sc-breakpoint(425) {
-        max-width: 63vw;
-      }
-
       .question-title {
+        margin: 0;
+        padding: 10px 0;
         grid-row: 1;
       }
 
       .question-answer {
+        @include sc-breakpoint(768) {
+          padding: 8px 20px 8px 0;
+        }
+        display: none;
         margin: 0;
         padding-top: 1px;
         padding-bottom: 7px;
+
+        &.open {
+          .question-answer {
+            display: block;
+          }
+        }
       }
 
       svg {
+        @include sc-breakpoint(768) {
+          width: 23px;
+          height: 14px;
+        }
+        width: 10px;
+        height: 7px;
         grid-row: 1;
         justify-self: end;
       }
