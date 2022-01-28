@@ -5,11 +5,25 @@ body {
 	font-family: "Kumbh Sans";
 }
 
+.accordion-main-title {
+	@include sc-breakpoint(768) {
+		font-size: 60px;
+	}
+	font-size: 32px;
+	line-height: 40px;
+}
+
 .question-title {
 	@include sc-breakpoint(768) {
 		font-size: 26px;
 		line-height: normal;
 	}
+
+	@include sc-breakpoint(1024) {
+		font-size: 20px;
+		line-height: 17.36px;
+	}
+
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 16px;
@@ -26,17 +40,13 @@ body {
 		font-size: 23px;
 		line-height: 31px;
 	}
+
+	@include sc-breakpoint(1024) {
+		font-size: 18px;
+	}
 	color: colors.$text-light-gray;
 	font-size: 12px;
 	line-height: 18px;
-}
-
-.accordion-main-title {
-	@include sc-breakpoint(768) {
-		font-size: 60px;
-	}
-	font-size: 32px;
-	line-height: 40px;
 }
 
 .text-dark--bold {

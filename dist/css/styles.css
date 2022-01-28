@@ -33,7 +33,11 @@
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  .accordion-wrapper {
+    overflow: hidden;
+  }
 }
 .accordion-container {
   position: relative;
@@ -51,6 +55,17 @@
 .accordion-container .border-img__main {
   width: 236.85px;
 }
+@media (min-width: 768px) {
+  .accordion-container .border-img__main {
+    width: 518px;
+    transform: translateY(-125px);
+  }
+}
+@media (min-width: 1024px) {
+  .accordion-container .border-img__main {
+    transform: translateY(0);
+  }
+}
 @media (min-width: 1024px) {
   .accordion-container .border-img__main img {
     height: auto;
@@ -64,11 +79,6 @@
 }
 .accordion-container .border-img__shadow {
   top: 112px;
-}
-@media (min-width: 768px) {
-  .accordion-container .border-img__shadow {
-    top: 221px;
-  }
 }
 @media (min-width: 1024px) {
   .accordion-container .border-img__shadow {
@@ -92,6 +102,11 @@
     align-items: center;
   }
 }
+@media (min-width: 1024px) {
+  .accordion-list-container {
+    align-self: end;
+  }
+}
 .accordion-list-wrapper {
   width: 88vw;
   display: flex;
@@ -105,11 +120,11 @@
 @media (min-width: 768px) {
   .accordion-list-wrapper {
     width: 90vw;
-    margin-top: 236px;
   }
 }
 @media (min-width: 1024px) {
   .accordion-list-wrapper {
+    height: 600px;
     margin-top: 0;
   }
 }
@@ -122,13 +137,14 @@
 }
 @media (min-width: 768px) {
   .accordion-list-wrapper .accordion-main-title {
-    margin-top: 245px;
+    margin-top: 213px;
     margin-bottom: 60px;
   }
 }
 @media (min-width: 1024px) {
   .accordion-list-wrapper .accordion-main-title {
-    margin-top: 79px;
+    margin-top: 70px;
+    margin-left: 173px;
   }
 }
 .accordion-list-wrapper .list-item {
@@ -149,6 +165,11 @@
     padding: 20px 0;
   }
 }
+@media (min-width: 1024px) {
+  .accordion-list-wrapper .list-item {
+    max-width: 40vw;
+  }
+}
 .accordion-list-wrapper .list-item .question-title {
   margin: 0;
   padding: 10px 0;
@@ -163,6 +184,11 @@
 @media (min-width: 768px) {
   .accordion-list-wrapper .list-item .question-answer {
     padding: 8px 20px 8px 0;
+  }
+}
+@media (min-width: 1024px) {
+  .accordion-list-wrapper .list-item .question-answer {
+    padding-bottom: 0;
   }
 }
 .accordion-list-wrapper .list-item .question-answer.open .question-answer {
@@ -220,7 +246,7 @@ body {
 }
 @media (min-width: 1024px) {
   .question-title {
-    font-size: 23px;
+    font-size: 20px;
     line-height: 17.36px;
   }
 }
@@ -242,7 +268,7 @@ body {
 }
 @media (min-width: 1024px) {
   .question-answer {
-    font-size: 21px;
+    font-size: 18px;
   }
 }
 

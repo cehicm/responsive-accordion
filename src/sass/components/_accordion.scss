@@ -3,11 +3,13 @@
 
 .accordion {
 	&-wrapper {
+		@include sc-breakpoint(1024) {
+			overflow: hidden;
+		}
 		position: absolute;
 		top: 50%;
 		right: 50%;
 		transform: translate(50%, -50%);
-		overflow: hidden;
 	}
 
 	&-container {
@@ -22,14 +24,17 @@
 		.border-img {
 			position: absolute;
 			&__main {
-				// @include sc-breakpoint(768) {
-				// 	width: 518px;
-				// }
+				@include sc-breakpoint(768) {
+					width: 518px;
+					transform: translateY(-125px);
+				}
+				@include sc-breakpoint(1024) {
+					transform: translateY(0);
+				}
 
 				img {
 					@include sc-breakpoint(1024) {
 						height: auto;
-
 						width: 550px;
 					}
 				}
@@ -41,11 +46,6 @@
 				width: 236.85px;
 			}
 			&__shadow {
-				@include sc-breakpoint(768) {
-					top: 221px;
-					//width: 518px;
-				}
-
 				@include sc-breakpoint(1024) {
 					left: -588px;
 					top: -297px;
@@ -69,16 +69,20 @@
 			align-items: center;
 		}
 
+		@include sc-breakpoint(1024) {
+			align-self: end;
+		}
+
 		margin-top: 0;
 		padding: 0 27px 31px 27px;
 	}
 	&-list-wrapper {
 		@include sc-breakpoint(768) {
 			width: 90vw;
-			margin-top: 236px;
 		}
 
 		@include sc-breakpoint(1024) {
+			height: 600px;
 			margin-top: 0;
 		}
 
@@ -97,12 +101,13 @@
 
 		.accordion-main-title {
 			@include sc-breakpoint(768) {
-				margin-top: 245px;
+				margin-top: 213px;
 				margin-bottom: 60px;
 			}
 
 			@include sc-breakpoint(1024) {
-				margin-top: 79px;
+				margin-top: 70px;
+				margin-left: 173px;
 			}
 
 			margin-top: 124px;
@@ -117,6 +122,10 @@
 			@include sc-breakpoint(768) {
 				max-width: 70vw;
 				padding: 20px 0;
+			}
+
+			@include sc-breakpoint(1024) {
+				max-width: 40vw;
 			}
 
 			display: grid;
@@ -135,6 +144,10 @@
 				@include sc-breakpoint(768) {
 					padding: 8px 20px 8px 0;
 				}
+				@include sc-breakpoint(1024) {
+					padding-bottom: 0;
+				}
+
 				display: none;
 				margin: 0;
 				padding-top: 1px;
