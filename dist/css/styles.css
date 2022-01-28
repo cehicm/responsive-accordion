@@ -33,12 +33,17 @@
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
+  overflow: hidden;
 }
 .accordion-container {
   position: relative;
   display: flex;
   justify-content: center;
-  padding-bottom: 75px;
+}
+@media (min-width: 1024px) {
+  .accordion-container {
+    align-items: center;
+  }
 }
 .accordion-container .border-img {
   position: absolute;
@@ -46,9 +51,15 @@
 .accordion-container .border-img__main {
   width: 236.85px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+  .accordion-container .border-img__main img {
+    height: auto;
+    width: 550px;
+  }
+}
+@media (min-width: 1024px) {
   .accordion-container .border-img__main {
-    width: 518px;
+    left: -108px;
   }
 }
 .accordion-container .border-img__shadow {
@@ -57,7 +68,17 @@
 @media (min-width: 768px) {
   .accordion-container .border-img__shadow {
     top: 221px;
-    width: 518px;
+  }
+}
+@media (min-width: 1024px) {
+  .accordion-container .border-img__shadow {
+    left: -588px;
+    top: -297px;
+  }
+}
+@media (min-width: 1024px) {
+  .accordion-container .border-img__shadow img {
+    width: 1000px;
   }
 }
 .accordion-list-container {
@@ -84,7 +105,12 @@
 @media (min-width: 768px) {
   .accordion-list-wrapper {
     width: 90vw;
-    margin-top: 241;
+    margin-top: 236px;
+  }
+}
+@media (min-width: 1024px) {
+  .accordion-list-wrapper {
+    margin-top: 0;
   }
 }
 .accordion-list-wrapper ul > li {
@@ -100,7 +126,7 @@
     margin-bottom: 60px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .accordion-list-wrapper .accordion-main-title {
     margin-top: 79px;
   }
@@ -170,6 +196,16 @@ body {
   font-family: "Kumbh Sans";
 }
 
+.accordion-main-title {
+  font-size: 32px;
+  line-height: 40px;
+}
+@media (min-width: 768px) {
+  .accordion-main-title {
+    font-size: 60px;
+  }
+}
+
 .question-title {
   font-size: 13px;
   font-weight: 400;
@@ -180,6 +216,12 @@ body {
   .question-title {
     font-size: 26px;
     line-height: normal;
+  }
+}
+@media (min-width: 1024px) {
+  .question-title {
+    font-size: 23px;
+    line-height: 17.36px;
   }
 }
 .question-title:hover {
@@ -198,14 +240,9 @@ body {
     line-height: 31px;
   }
 }
-
-.accordion-main-title {
-  font-size: 32px;
-  line-height: 40px;
-}
-@media (min-width: 768px) {
-  .accordion-main-title {
-    font-size: 60px;
+@media (min-width: 1024px) {
+  .question-answer {
+    font-size: 21px;
   }
 }
 

@@ -2,129 +2,161 @@
 @import "../variables/breakpoints";
 
 .accordion {
-  &-wrapper {
-    position: absolute;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-  }
+	&-wrapper {
+		position: absolute;
+		top: 50%;
+		right: 50%;
+		transform: translate(50%, -50%);
+		overflow: hidden;
+	}
 
-  &-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 75px;
+	&-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
 
-    .border-img {
-      position: absolute;
-      &__main {
-        @include sc-breakpoint(768) {
-          width: 518px;
-        }
+		@include sc-breakpoint(1024) {
+			align-items: center;
+		}
 
-        width: 236.85px;
-      }
-      &__shadow {
-        @include sc-breakpoint(768) {
-          top: 221px;
-          width: 518px;
-        }
-        top: 112px;
-      }
-    }
-  }
+		.border-img {
+			position: absolute;
+			&__main {
+				// @include sc-breakpoint(768) {
+				// 	width: 518px;
+				// }
 
-  &-list-container {
-    @include sc-breakpoint(768) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+				img {
+					@include sc-breakpoint(1024) {
+						height: auto;
 
-    margin-top: 0;
-    padding: 0 27px 31px 27px;
-  }
-  &-list-wrapper {
-    @include sc-breakpoint(768) {
-      width: 90vw;
-      margin-top: 241;
-    }
+						width: 550px;
+					}
+				}
 
-    width: 88vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: colors.$white;
-    border-radius: 23px;
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 50%);
-    margin-top: 109px;
+				@include sc-breakpoint(1024) {
+					left: -108px;
+				}
 
-    ul > li {
-      list-style: none;
-    }
+				width: 236.85px;
+			}
+			&__shadow {
+				@include sc-breakpoint(768) {
+					top: 221px;
+					//width: 518px;
+				}
 
-    .accordion-main-title {
-      @include sc-breakpoint(768) {
-        margin-top: 245px;
-        margin-bottom: 60px;
-      }
+				@include sc-breakpoint(1024) {
+					left: -588px;
+					top: -297px;
+				}
 
-      @include sc-breakpoint(768) {
-        margin-top: 79px;
-      }
+				top: 112px;
 
-      margin-top: 124px;
-      margin-bottom: 22px;
-    }
+				img {
+					@include sc-breakpoint(1024) {
+						width: 1000px;
+					}
+				}
+			}
+		}
+	}
 
-    .list-item {
-      @include sc-breakpoint(425) {
-        max-width: 63vw;
-      }
+	&-list-container {
+		@include sc-breakpoint(768) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
 
-      @include sc-breakpoint(768) {
-        max-width: 70vw;
-        padding: 20px 0;
-      }
+		margin-top: 0;
+		padding: 0 27px 31px 27px;
+	}
+	&-list-wrapper {
+		@include sc-breakpoint(768) {
+			width: 90vw;
+			margin-top: 236px;
+		}
 
-      display: grid;
-      align-items: center;
-      width: 79vw;
-      padding: 7px 0;
-      border-bottom: 1px solid colors.$border-light-gray;
+		@include sc-breakpoint(1024) {
+			margin-top: 0;
+		}
 
-      .question-title {
-        margin: 0;
-        padding: 10px 0;
-        grid-row: 1;
-      }
+		width: 88vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: colors.$white;
+		border-radius: 23px;
+		box-shadow: 0 25px 50px -12px rgb(0 0 0 / 50%);
+		margin-top: 109px;
 
-      .question-answer {
-        @include sc-breakpoint(768) {
-          padding: 8px 20px 8px 0;
-        }
-        display: none;
-        margin: 0;
-        padding-top: 1px;
-        padding-bottom: 7px;
+		ul > li {
+			list-style: none;
+		}
 
-        &.open {
-          .question-answer {
-            display: block;
-          }
-        }
-      }
+		.accordion-main-title {
+			@include sc-breakpoint(768) {
+				margin-top: 245px;
+				margin-bottom: 60px;
+			}
 
-      svg {
-        @include sc-breakpoint(768) {
-          width: 23px;
-          height: 14px;
-        }
-        width: 10px;
-        height: 7px;
-        grid-row: 1;
-        justify-self: end;
-      }
-    }
-  }
+			@include sc-breakpoint(1024) {
+				margin-top: 79px;
+			}
+
+			margin-top: 124px;
+			margin-bottom: 22px;
+		}
+
+		.list-item {
+			@include sc-breakpoint(425) {
+				max-width: 63vw;
+			}
+
+			@include sc-breakpoint(768) {
+				max-width: 70vw;
+				padding: 20px 0;
+			}
+
+			display: grid;
+			align-items: center;
+			width: 79vw;
+			padding: 7px 0;
+			border-bottom: 1px solid colors.$border-light-gray;
+
+			.question-title {
+				margin: 0;
+				padding: 10px 0;
+				grid-row: 1;
+			}
+
+			.question-answer {
+				@include sc-breakpoint(768) {
+					padding: 8px 20px 8px 0;
+				}
+				display: none;
+				margin: 0;
+				padding-top: 1px;
+				padding-bottom: 7px;
+
+				&.open {
+					.question-answer {
+						display: block;
+					}
+				}
+			}
+
+			svg {
+				@include sc-breakpoint(768) {
+					width: 23px;
+					height: 14px;
+				}
+				width: 10px;
+				height: 7px;
+				grid-row: 1;
+				justify-self: end;
+			}
+		}
+	}
 }
