@@ -42,10 +42,18 @@ body {
 					z-index: 2;
 				}
 
+				@include sc-breakpoint(1400) {
+					transform: translateY(-28px);
+				}
+
 				img {
 					@include sc-breakpoint(1024) {
 						height: auto;
 						width: 550px;
+					}
+
+					@include sc-breakpoint(1400) {
+						width: 593px;
 					}
 				}
 			}
@@ -54,11 +62,26 @@ body {
 					left: -588px;
 					top: -313px;
 				}
+				@include sc-breakpoint(1400) {
+					top: -320px;
+				}
+
+				@include sc-breakpoint(1820) {
+					top: -433px;
+					left: -876px;
+				}
 				top: 112px;
 
 				img {
 					@include sc-breakpoint(1024) {
 						width: 1047px;
+					}
+					@include sc-breakpoint(1400) {
+						width: 1064px;
+					}
+
+					@include sc-breakpoint(1820) {
+						width: 1442px;
 					}
 				}
 			}
@@ -68,6 +91,13 @@ body {
 					z-index: 3;
 					position: fixed;
 					transform: translate(-458px, 23px);
+				}
+				@include sc-breakpoint(1400) {
+					transform: translate(-588px, 35px);
+				}
+
+				@include sc-breakpoint(1820) {
+					transform: translate(-726px, 35px);
 				}
 				display: none;
 			}

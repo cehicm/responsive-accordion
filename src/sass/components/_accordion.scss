@@ -12,6 +12,11 @@
 		@include sc-breakpoint(1024) {
 			align-self: end;
 		}
+
+		@include sc-breakpoint(1820) {
+			margin-right: 216px;
+		}
+
 		margin-top: 0;
 		padding: 0 27px 31px 27px;
 	}
@@ -23,6 +28,16 @@
 		@include sc-breakpoint(1024) {
 			height: 600px;
 			margin-top: 0;
+		}
+
+		@include sc-breakpoint(1400) {
+			width: 82vw;
+		}
+
+		@include sc-breakpoint(1820) {
+			width: 57vw;
+			height: 765px;
+			justify-content: center;
 		}
 		width: 88vw;
 		display: flex;
@@ -47,6 +62,12 @@
 				margin-top: 70px;
 				margin-left: 173px;
 			}
+
+			@include sc-breakpoint(1400) {
+				margin-top: 74px;
+				margin-left: 99px;
+			}
+
 			margin-top: 124px;
 			margin-bottom: 22px;
 		}
@@ -64,6 +85,10 @@
 			@include sc-breakpoint(1024) {
 				max-width: 40vw;
 			}
+			@include sc-breakpoint(1820) {
+				max-width: 20vw;
+			}
+
 			display: grid;
 			align-items: center;
 			width: 79vw;
@@ -105,7 +130,6 @@
 				@include sc-breakpoint(1024) {
 					width: 14px;
 				}
-
 				width: 10px;
 				height: 7px;
 				grid-row: 1;
