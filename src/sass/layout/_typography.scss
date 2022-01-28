@@ -2,44 +2,44 @@
 @import "../variables/breakpoints";
 
 body {
-  font-family: "Kumbh Sans";
+	font-family: "Kumbh Sans";
 }
 
 .question-title {
-  @include sc-breakpoint(768) {
-    font-size: 26px;
-    line-height: normal;
-  }
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 16px;
-  color: colors.$question-title-dark-gray;
+	@include sc-breakpoint(768) {
+		font-size: 26px;
+		line-height: normal;
+	}
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 16px;
+	color: colors.$question-title-dark-gray;
 
-  &:hover {
-    color: colors.$arrow-orange;
-    cursor: pointer;
-  }
+	&:hover {
+		color: colors.$arrow-orange;
+		cursor: pointer;
+	}
 }
 
 .question-answer {
-  @include sc-breakpoint(768) {
-    font-size: 23px;
-    line-height: 31px;
-  }
-  color: colors.$text-light-gray;
-  font-size: 12px;
-  line-height: 18px;
+	@include sc-breakpoint(768) {
+		font-size: 23px;
+		line-height: 31px;
+	}
+	color: colors.$text-light-gray;
+	font-size: 12px;
+	line-height: 18px;
 }
 
 .accordion-main-title {
-  @include sc-breakpoint(768) {
-    font-size: 60px;
-  }
-  font-size: 32px;
-  line-height: 40px;
+	@include sc-breakpoint(768) {
+		font-size: 60px;
+	}
+	font-size: 32px;
+	line-height: 40px;
 }
 
 .text-dark--bold {
-  font-weight: 700;
-  color: colors.$question-title-dark-gray;
+	font-weight: 700;
+	color: colors.$question-title-dark-gray;
 }

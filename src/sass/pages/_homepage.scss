@@ -1,9 +1,9 @@
 @use "../variables/colors" as colors;
 
 body {
-  background: linear-gradient(
-    180deg,
-    colors.$gradient-light-purple 0%,
-    colors.$gradient-dark-purple 100%
-  );
+	background: linear-gradient(
+		180deg,
+		colors.$gradient-light-purple 0%,
+		colors.$gradient-dark-purple 100%
+	);
 }

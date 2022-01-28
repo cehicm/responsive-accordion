@@ -1,15 +1,15 @@
 .rotate-180 {
-  transform: rotateZ(180deg);
+	transform: rotateZ(180deg);
 }
 
 //Text show/hide classes
 .list-item {
-  .question-answer {
-    display: none;
-  }
-  &.open {
-    .question-answer {
-      display: block;
-    }
-  }
+	.question-answer {
+		display: none;
+	}
+	&.open {
+		.question-answer {
+			display: block;
+		}
+	}
 }
