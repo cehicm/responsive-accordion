@@ -1,54 +1,120 @@
 <html lang="en">
-<head>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="/dist/css/styles.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Accordion</title>
-</head>
-<body>
-    <div class="accordion-wrapper">
-        <div class="accordion-container">
-            <img class="border-img border-img__main" src="/src/images/illustration-woman-online-mobile.svg" alt="illustration-woman-online-mobile"
-            srcset="">
-            <img class="border-img border-img__shadow" src="/src/images/bg-pattern-mobile.svg" alt="bg-pattern-mobile"
-            srcset="">
-            <div class="accordion-list-wrapper">
-                <h1 class="accordion-main-title">FAQ</h1>
-                <ul class="accordion-list-container">
-                    <li class="list-item">
-                        <h2 class="question-title">How many team members can I invite?</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.2 10 6">
-                            <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"></path>
-                        </svg>
-                        <p class="question-answer"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores odit perspiciatis tenetur debitis sint labore! </p>
-                    </li>
-                    <li class="list-item">
-                        <h2 class="question-title">What is the maximum file upload size?</h2>
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.2 10 6">
-                            <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"></path>
-                        </svg>
-                        <p class="question-answer"> No more than 2GB. All files in your account must fit your allotted storage space. </p>
-                    </li>
-                    <li class="list-item">
-                        <h2 class="question-title">How do I reset my password?</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.2 10 6">
-                            <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"></path>
-                        </svg>
-                        <p class="question-answer">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores odit perspiciatis tenetur debitis sint labore! </p>
-                    </li>
-                    <li class="list-item">
-                        <h2 class="question-title">Do you procide additional support?</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.2 10 6">
-                            <path d="M1 .799l4 4 4-4" stroke="#F47B56" stroke-width="2" fill="none" fill-rule="evenodd"></path>
-                        </svg>
-                        <p class="question-answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores  odit perspiciatis tenetur debitis sint labore! </p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<script src="/dist/scripts/app.js"></script>
-</body>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<link rel="stylesheet" href="/dist/css/styles.css" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Responsive Accordion</title>
+	</head>
+
+	<body>
+		<div class="accordion-wrapper">
+			<div class="accordion-container">
+				<picture class="border-img border-img__main">
+					<source
+						srcset="/src/images/illustration-woman-online-desktop.svg"
+						media="(min-width: 1024px)"
+					/>
+					<source
+						srcset="/src/images/illustration-woman-online-mobile.svg"
+						media="(min-width:320px)"
+					/>
+					<img
+						alt="Illustration woman online"
+						src="/src/images/illustration-woman-online-mobile.svg"
+					/>
+				</picture>
+
+				<picture class="border-img border-img__shadow">
+					<source
+						srcset="/src/images/bg-pattern-desktop.svg"
+						media="(min-width: 1024px)"
+					/>
+					<source
+						srcset="/src/images/bg-pattern-mobile.svg"
+						media="(min-width:320px)"
+					/>
+					<img
+						alt="Background shadow pattern"
+						src="/src/images/bg-pattern-mobile.svg"
+					/>
+				</picture>
+				<div class="accordion-list-wrapper">
+					<h1 class="accordion-main-title">FAQ</h1>
+					<ul class="accordion-list-container">
+						<li class="list-item">
+							<h2 class="question-title">
+								How many team members can I invite?
+							</h2>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.2 10 6">
+								<path
+									d="M1 .799l4 4 4-4"
+									stroke="#F47B56"
+									stroke-width="2"
+									fill="none"
+									fill-rule="evenodd"
+								></path>
+							</svg>
+							<p class="question-answer">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+								odit perspiciatis tenetur debitis sint labore!
+							</p>
+						</li>
+						<li class="list-item">
+							<h2 class="question-title">
+								What is the maximum file upload size?
+							</h2>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.2 10 6">
+								<path
+									d="M1 .799l4 4 4-4"
+									stroke="#F47B56"
+									stroke-width="2"
+									fill="none"
+									fill-rule="evenodd"
+								></path>
+							</svg>
+							<p class="question-answer">
+								No more than 2GB. All files in your account must fit your
+								allotted storage space.
+							</p>
+						</li>
+						<li class="list-item">
+							<h2 class="question-title">How do I reset my password?</h2>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.2 10 6">
+								<path
+									d="M1 .799l4 4 4-4"
+									stroke="#F47B56"
+									stroke-width="2"
+									fill="none"
+									fill-rule="evenodd"
+								></path>
+							</svg>
+							<p class="question-answer">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+								odit perspiciatis tenetur debitis sint labore!
+							</p>
+						</li>
+						<li class="list-item">
+							<h2 class="question-title">Do you procide additional support?</h2>
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -0.2 10 6">
+								<path
+									d="M1 .799l4 4 4-4"
+									stroke="#F47B56"
+									stroke-width="2"
+									fill="none"
+									fill-rule="evenodd"
+								></path>
+							</svg>
+							<p class="question-answer">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+								odit perspiciatis tenetur debitis sint labore!
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="/dist/scripts/app.js"></script>
+	</body>
 </html>
