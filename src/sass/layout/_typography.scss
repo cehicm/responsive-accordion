@@ -38,7 +38,7 @@ body {
 .question-answer {
 	@include sc-breakpoint(768) {
 		font-size: 23px;
-		line-height: 31px;
+		line-height: 29px;
 	}
 
 	@include sc-breakpoint(1024) {
