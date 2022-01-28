@@ -46,6 +46,7 @@
 }
 @media (min-width: 1820px) {
   .accordion-list-container {
+    height: 400px;
     margin-right: 216px;
   }
 }
