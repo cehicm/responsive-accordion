@@ -2,68 +2,6 @@
 @import "../variables/breakpoints";
 
 .accordion {
-	&-wrapper {
-		position: absolute;
-		top: 50%;
-		right: 50%;
-		transform: translate(50%, -50%);
-	}
-
-	&-container {
-		position: relative;
-		display: flex;
-		justify-content: center;
-
-		@include sc-breakpoint(1024) {
-			align-items: center;
-			overflow: hidden;
-		}
-
-		.border-img {
-			position: absolute;
-			&__main {
-				@include sc-breakpoint(768) {
-					width: 518px;
-					transform: translateY(-125px);
-				}
-				@include sc-breakpoint(1024) {
-					transform: translateY(-33px);
-				}
-
-				img {
-					@include sc-breakpoint(1024) {
-						height: auto;
-						width: 550px;
-					}
-				}
-
-				@include sc-breakpoint(1024) {
-					left: -108px;
-				}
-
-				width: 236.85px;
-			}
-			&__shadow {
-				@include sc-breakpoint(1024) {
-					left: -588px;
-					top: -297px;
-				}
-
-				top: 112px;
-
-				img {
-					@include sc-breakpoint(1024) {
-						width: 1000px;
-					}
-				}
-			}
-			&__box {
-				position: fixed;
-				transform: translate(-464px, 60px);
-			}
-		}
-	}
-
 	&-list-container {
 		@include sc-breakpoint(768) {
 			display: flex;
@@ -74,7 +12,6 @@
 		@include sc-breakpoint(1024) {
 			align-self: end;
 		}
-
 		margin-top: 0;
 		padding: 0 27px 31px 27px;
 	}
@@ -87,7 +24,6 @@
 			height: 600px;
 			margin-top: 0;
 		}
-
 		width: 88vw;
 		display: flex;
 		flex-direction: column;
@@ -111,7 +47,6 @@
 				margin-top: 70px;
 				margin-left: 173px;
 			}
-
 			margin-top: 124px;
 			margin-bottom: 22px;
 		}
@@ -129,7 +64,6 @@
 			@include sc-breakpoint(1024) {
 				max-width: 40vw;
 			}
-
 			display: grid;
 			align-items: center;
 			width: 79vw;
@@ -154,11 +88,11 @@
 				margin: 0;
 				padding-top: 1px;
 				padding-bottom: 7px;
+			}
 
-				&.open {
-					.question-answer {
-						display: block;
-					}
+			&.open {
+				.question-answer {
+					display: block;
 				}
 			}
 
@@ -167,6 +101,11 @@
 					width: 23px;
 					height: 14px;
 				}
+
+				@include sc-breakpoint(1024) {
+					width: 14px;
+				}
+
 				width: 10px;
 				height: 7px;
 				grid-row: 1;
