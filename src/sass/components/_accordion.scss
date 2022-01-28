@@ -3,9 +3,6 @@
 
 .accordion {
 	&-wrapper {
-		@include sc-breakpoint(1024) {
-			overflow: hidden;
-		}
 		position: absolute;
 		top: 50%;
 		right: 50%;
@@ -19,6 +16,7 @@
 
 		@include sc-breakpoint(1024) {
 			align-items: center;
+			overflow: hidden;
 		}
 
 		.border-img {
@@ -29,7 +27,7 @@
 					transform: translateY(-125px);
 				}
 				@include sc-breakpoint(1024) {
-					transform: translateY(0);
+					transform: translateY(-33px);
 				}
 
 				img {
@@ -58,6 +56,10 @@
 						width: 1000px;
 					}
 				}
+			}
+			&__box {
+				position: fixed;
+				transform: translate(-464px, 60px);
 			}
 		}
 	}
